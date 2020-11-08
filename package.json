@@ -1,0 +1,78 @@
+{
+  "name": "jswallet",
+  "productName": "jswallet",
+  "version": "1.0.0",
+  "description": "A sample Bitcoin wallet",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --cache --color --ext .jsx,.js src"
+  },
+  "keywords": [],
+  "author": "mmichailidis",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "yarn"
+      },
+      "electronWinstallerConfig": {
+        "name": "jswallet"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "jswallet"
+      }
+    }
+  },
+  "dependencies": {
+    "antd": "^3.2.0",
+    "axios": "^0.18.0",
+    "bip39": "^2.5.0",
+    "bitcoinjs-lib": "^3.3.2",
+    "blockchain.info": "^2.11.0",
+    "bs58": "^4.0.1",
+    "electron-compile": "^6.4.2",
+    "electron-devtools-installer": "^2.1.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "nedb": "^1.8.0",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "recharts": "^1.0.0-beta.10"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.7.7",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.2.4",
+    "electron-prebuilt-compile": "5.0.13",
+    "eslint": ">=4.18.2",
+    "eslint-config-airbnb": "^15",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jsx-a11y": "^5",
+    "eslint-plugin-react": "^7"
+  }
+}
