@@ -1,4 +1,4 @@
-# bitgesell_wallet
+# Bitgesell_wallet
 
 # Run wallet
 ```
